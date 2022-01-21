@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+    @apply rounded px-2 py-1 font-bold shadow h-fit max-w-md w-max transition duration-150 hover:ease-in;
+}
+.btn-primary {
+    @apply btn bg-primary text-white hover:bg-cyan-700;
+}
+.btn-secondary {
+    @apply btn bg-secondary text-dark hover:bg-zinc-400;
+}
+.btn-danger {
+    @apply btn bg-red-500 text-white hover:bg-red-700;
+}
+
+.form {
+    @apply flex flex-col justify-center gap-2 text-lg bg-lighter rounded p-6 w-1/3;
+}
+.form .form-buttons {
+    @apply flex justify-center pt-4;
+}
+.form .form-buttons button[type=submit] {
+    @apply btn-primary;
+}
+.form label span {
+    @apply block;
+}
+.form input {
+    @apply p-2 w-full rounded text-black bg-secondary focus:bg-white outline-0;
+}
+.form .field-error {
+    @apply text-red-500;
+}
+.form .field-error input {
+    @apply border-2 border-red-500;
+}
